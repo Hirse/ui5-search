@@ -1,0 +1,15 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+    <Dialog class="sapUiPopupWithPadding" title="{i18n>settingsTitle}">
+        <Label text="{i18n>ui5Flavor}" width="100%" />
+        <Select selectedKey="{settings>/selectedFlavor}" width="100%" items="{settings>/flavors}">
+            <core:Item key="{settings>key}" text="{settings>name}" />
+        </Select>
+        <Label text="{i18n>version}" width="100%" />
+        <Select selectedKey="{settings>/selectedVersion}" width="100%" items="{settings>/versions}">
+            <core:Item key="{settings>key}" text="{settings>name}" />
+        </Select>
+        <buttons>
+            <Button text="{i18n>okButton}" press="onOkButtonPress" />
+        </buttons>
+    </Dialog>
+</core:FragmentDefinition>

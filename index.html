@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+    <meta charset="UTF-8" />
+    <title>Search UI5 API</title>
+    <script id="sap-ui-bootstrap"
+        src="https://openui5.hana.ondemand.com/resources/sap-ui-core.js"
+        data-sap-ui-libs="sap.m"
+        data-sap-ui-theme="sap_bluecrystal"
+        data-sap-ui-compatVersion="edge">
+    </script>
+    <script>
+      jQuery.sap.registerModulePath("hirse.search", "");
+
+      sap.ui.getCore().attachInit(function() {
+        sap.ui.require([
+          "sap/ui/core/ComponentContainer"
+        ], function(ComponentContainer) {
+          "use strict";
+
+          new ComponentContainer({
+            name: "hirse.search"
+          }).placeAt("content");
+        });
+      });
+    </script>
+  </head>
+
+  <body id="content" class="sapUiBody"></body>
+
+</html>

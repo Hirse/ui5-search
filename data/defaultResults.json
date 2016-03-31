@@ -1,0 +1,18 @@
+[{
+    "matches": [{
+        "score": 3,
+        "path": "docs/api/symbols/sap.ui.html",
+        "title": "API Reference",
+        "summary": "UI5 API Reference"
+    }, {
+        "score": 2,
+        "path": "docs/guide/95d113be50ae40d5b0b562b84d715227.html",
+        "title": "Developer Guide",
+        "summary": "UI Development Toolkit for HTML5"
+    }, {
+        "score": 1,
+        "path": "content/Controls/index.html",
+        "title": "Desktop Controls",
+        "summary": "Control Gallery for sap.ui.commons"
+    }]
+}]

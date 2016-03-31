@@ -1,0 +1,23 @@
+<mvc:View controllerName="hirse.search.controller.Search" xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc">
+   <Page title="{i18n>pageViewTitle}">
+      <headerContent>
+         <Button icon="sap-icon://action-settings" tooltip="{i18n>settings}" press="onSettingsPress" />
+      </headerContent>
+      <subHeader>
+         <Toolbar>
+            <SearchField search=".onSearch" />
+         </Toolbar>
+      </subHeader>
+      <List busy="{state>/busy}" busyIndicatorDelay="0" growing="true" growingThreshold="10" items="{path: 'result>/0/matches', sorter: {path: 'result>score', descending: true}}">
+         <CustomListItem class="resultListItem" type="Navigation" tooltip="{parts: ['result>path', 'settings>/selectedFlavor', 'settings>/selectedVersion'], formatter: '.formatter.formatPath'}" press="onItemPress">
+            <HBox alignItems="Center">
+               <core:Icon class="resultListItemIcon" src="{path: 'result>path', formatter: '.formatter.formatIcon'}" useIconTooltip="false" />
+               <VBox>
+                  <Title text="{path: 'result>title', formatter: '.formatter.formatTitle'}" />
+                  <Text text="{result>summary}" />
+               </VBox>
+            </HBox>
+         </CustomListItem>
+      </List>
+   </Page>
+</mvc:View>
